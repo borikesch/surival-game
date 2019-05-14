@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="col-3"
+       *ngFor="let action of actions">
+    <app-action [action]="action"
+                (actionClick)="onActionClick($event)"></app-action>
+  </div>
+</div>

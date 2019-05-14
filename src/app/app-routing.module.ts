@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { SurvivalGameHubComponent } from './components/survival-game-hub/survival-game-hub.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'main', component: SurvivalGameHubComponent },
+  { path: '**', redirectTo: 'main' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
