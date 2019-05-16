@@ -1,0 +1,12 @@
+[
+  {
+    "title": "You see a rabbit in the distance...",
+    "actions": [
+      {
+        "description": "Run at it with your weapon",
+        "action": "run"
+      }
+    ],
+    "chance": 1
+  }
+]

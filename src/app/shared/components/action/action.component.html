@@ -1,1 +1,3 @@
-<button (click)="onActionClick()"> {{action.description}} </button>
+<button class="btn btn-block"
+        (click)="onActionClick()"
+        [disabled]="disabled"> {{action.description}} </button>

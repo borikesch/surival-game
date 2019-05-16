@@ -1,0 +1,18 @@
+.btn {
+  color: #cccccc;
+  border-color: grey;
+  width: 100%;
+}
+
+button {
+  background-color: #222222;
+  height:70px;
+}
+
+button:hover {
+  background-color: #333333;
+}
+
+button:active {
+  background-color: #555555;
+}

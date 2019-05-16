@@ -8,6 +8,8 @@ import { Action } from '../../models/action.model';
 })
 export class SurvivalGameActionsComponent {
   @Input() actions: Action[];
+  @Input() title: string;
+  @Input() disabled: boolean;
   @Output() actionClick: EventEmitter<any> = new EventEmitter();
 
   onActionClick(event) {

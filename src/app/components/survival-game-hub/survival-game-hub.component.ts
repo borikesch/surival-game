@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Action } from 'src/app/shared/models/action.model';
-import { Resources } from 'src/app/shared/models/resources.model';
+import { EventState } from 'src/app/shared/models/event-state.model';
+import { GameState } from 'src/app/shared/models/game-state.model';
+import { GameStateService } from 'src/app/shared/services/game-state.service';
 
 @Component({
   selector: 'app-survival-game-hub',
@@ -8,32 +11,89 @@ import { Resources } from 'src/app/shared/models/resources.model';
   styleUrls: ['./survival-game-hub.component.css']
 })
 export class SurvivalGameHubComponent implements OnInit {
-  actions: Action[];
-  resources: Resources;
+  morningActions: Action[];
+  afternoonActions: Action[];
+  gameState: GameState;
 
-  constructor() {
+  messageText: string;
+  title: string;
+
+  constructor(
+    private router: Router,
+    private gameStateService: GameStateService) {
   }
 
   ngOnInit() {
-    this.actions = [
-      new Action('Eat food', 'food'),
-      new Action('Spend money', 'money')
+    this.gameState = this.gameStateService.getGameState();
+    console.log(this.gameState);
+    if (this.gameState.eventState.eventStarted && !this.gameState.eventState.eventCompleted) {
+      if (this.gameState.eventState.isFromNightToDay) {
+        this.gameState.eventState = new EventState();
+        this.title = 'You tried your best to make the night go away... You succeeded... but at what cost...';
+        this.gameState.resources.health--;
+      } else {
+        this.router.navigateByUrl('/main/night');
+      }
+    } else {
+      this.gameState.eventState = new EventState();
+      this.title = 'Another day... Another chance to survive...';
+    }
+
+    this.morningActions = [
+      new Action('Eat some food to recover health', 'food'),
+      new Action('Tend to the fire...', 'wood')
     ];
 
-    this.resources = new Resources(100, 100);
-    console.log(this.resources);
+    this.afternoonActions = [
+      new Action('Rest a little bit...', 'rest'),
+      new Action('Try to hunt for some food', 'hunt'),
+      new Action('Go to the woods to find some firewood', 'scavenge'),
+    ];
+
+    this.gameStateService.updateGameState(this.gameState);
   }
 
   onActionClick(action: Action) {
     if (action.action === 'food') { this.onActionEatFood(); }
-    if (action.action === 'money') { this.onActionSpendMoney(); }
+    if (action.action === 'wood') { this.onActionSpendWood(); }
+    if (action.action === 'hunt') { this.onActionHunt(); }
+    if (action.action === 'rest') { this.onActionRest(); }
+    if (action.action === 'scavenge') { this.onActionScavenge(); }
   }
 
   onActionEatFood() {
-    this.resources.food--;
+    // Todo check validity
+    this.messageText = 'You ate some food... I hope you left enough...';
+    this.gameState.resources.food--; // todo balance
+    this.gameState.resources.health++; // todo balance
+    this.gameStateService.updateGameState(this.gameState);
   }
 
-  onActionSpendMoney() {
-    this.resources.money--;
+  onActionSpendWood() {
+    // Todo check validity
+    this.messageText = 'The fire is burning nicely... That didn\'t cost to much, did it...?';
+    this.gameState.resources.wood--; // todo balance
+    this.gameState.resources.fire++; // todo balance
+    this.gameStateService.updateGameState(this.gameState);
+  }
+
+  onActionHunt() {
+    this.proceedToNight();
+    this.router.navigate(['/event', 'hunt']);
+  }
+
+  onActionRest() {
+    this.proceedToNight();
+    this.router.navigate(['/event', 'rest']);
+  }
+
+  onActionScavenge() {
+    this.proceedToNight();
+    this.router.navigate(['/event', 'scavenge']);
+  }
+
+  proceedToNight() {
+    this.gameState.eventState.isFromDayToNight = true;
+    this.gameStateService.updateGameState(this.gameState);
   }
 }

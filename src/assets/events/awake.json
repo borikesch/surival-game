@@ -1,0 +1,16 @@
+[
+  {
+    "title": "You try to stay up the whole night... Nothing seems to happen.",
+    "actions": [
+      {
+        "description": "Stay awake",
+        "action": "awake2"
+      },
+      {
+        "description": "Go to sleep anyway",
+        "action": "sleep2"
+      }
+    ],
+    "chance": 1
+  }
+]

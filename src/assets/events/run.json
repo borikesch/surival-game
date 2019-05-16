@@ -1,0 +1,13 @@
+[
+  {
+    "title": "You got the rabbit and got some food from it",
+    "actions": [
+      {
+        "description": "Return to your base",
+        "action": ""
+      }
+    ],
+    "foodIncrease": 1,
+    "chance": 1
+  }
+]

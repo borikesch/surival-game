@@ -1,0 +1,19 @@
+<div *ngIf="gameState">
+  <h2>Dit is de eventpage {{eventType}}</h2>
+
+  <app-survival-game-actions *ngIf="gameState.eventState.firstEvent"
+                             [title]="gameState.eventState.firstEvent.title"
+                             [actions]="gameState.eventState.firstEvent.actions"
+                             [disabled]="gameState.eventState.secondEvent"
+                             (actionClick)="onClickFirstEvent($event)"></app-survival-game-actions>
+  <app-survival-game-actions *ngIf="gameState.eventState.secondEvent"
+                             [title]="gameState.eventState.secondEvent.title"
+                             [actions]="gameState.eventState.secondEvent.actions"
+                             [disabled]="gameState.eventState.thirdEvent"
+                             (actionClick)="onClickSecondEvent($event)"></app-survival-game-actions>
+  <app-survival-game-actions *ngIf="gameState.eventState.thirdEvent"
+                             [title]="gameState.eventState.thirdEvent.title"
+                             [actions]="gameState.eventState.thirdEvent.actions"
+                             [disabled]="false"
+                             (actionClick)="onClickThirdEvent($event)"></app-survival-game-actions>
+</div>

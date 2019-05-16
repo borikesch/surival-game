@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Nothing happened all night, you wake up feeling refreshed",
+    "actions": [
+      {
+        "description": "Ready for another day",
+        "action": ""
+      }
+    ],
+    "healthIncrease": 1,
+    "chance": 1
+  }
+]

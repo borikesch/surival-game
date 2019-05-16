@@ -1,0 +1,12 @@
+[
+  {
+    "title": "You slept a little bit at the last minute...",
+    "actions": [
+      {
+        "description": "Should have slept the whole night",
+        "action": ""
+      }
+    ],
+    "chance": 1
+  }
+]

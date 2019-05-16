@@ -1,18 +1,12 @@
 <div *ngIf="gameState">
   <h1>{{ title }}</h1>
 
-  <app-survival-game-actions [actions]="morningActions"
+  <app-survival-game-actions [actions]="actions"
                              [disabled]="false"
                              [title]="'Please take good care of yourself....'"
                              (actionClick)="onActionClick($event)"></app-survival-game-actions>
   {{ messageText }}
   <div>
     <app-survival-game-resources [resources]="gameState.resources"></app-survival-game-resources>
-  </div>
-  <div>
-    <app-survival-game-actions [actions]="afternoonActions"
-                               [disabled]="false"
-                               [title]="'What do you want to do this afternoon...?'"
-                               (actionClick)="onActionClick($event)"></app-survival-game-actions>
   </div>
 </div>

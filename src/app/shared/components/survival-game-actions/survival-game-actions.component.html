@@ -1,7 +1,9 @@
+<h3>{{title}}</h3>
 <div class="row">
-  <div class="col-3"
+  <div [className]="'text-center col-md-' + (12 /actions.length)"
        *ngFor="let action of actions">
     <app-action [action]="action"
+                [disabled]="disabled"
                 (actionClick)="onActionClick($event)"></app-action>
   </div>
 </div>

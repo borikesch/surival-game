@@ -1,0 +1,11 @@
+{
+  "resources": {
+    "food": 10,
+    "health": 10,
+    "wood": 10,
+    "fire": 10
+  },
+  "eventStarted": true,
+  "eventCompleted": true,
+  "day": 0
+}
