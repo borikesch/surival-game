@@ -1,0 +1,13 @@
+[
+  {
+    "title": "You found more twigs! You return home safily and content...",
+    "actions": [
+      {
+        "description": "What a great day",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 2,
+    "chance": 1
+  }
+]

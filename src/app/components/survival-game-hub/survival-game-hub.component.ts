@@ -11,12 +11,13 @@ import { GameStateService } from 'src/app/shared/services/game-state.service';
   styleUrls: ['./survival-game-hub.component.css']
 })
 export class SurvivalGameHubComponent implements OnInit {
-  morningActions: Action[];
-  afternoonActions: Action[];
+  morningActions: Action[] = [];
+  afternoonActions: Action[] = [];
   gameState: GameState;
 
   messageText: string;
   title: string;
+  subtitle: string;
 
   constructor(
     private router: Router,
@@ -24,8 +25,8 @@ export class SurvivalGameHubComponent implements OnInit {
   }
 
   ngOnInit() {
+    // get gameState and check validity
     this.gameState = this.gameStateService.getGameState();
-    console.log(this.gameState);
     if (this.gameState.eventState.eventStarted && !this.gameState.eventState.eventCompleted) {
       if (this.gameState.eventState.isFromNightToDay) {
         this.gameState.eventState = new EventState();
@@ -39,16 +40,25 @@ export class SurvivalGameHubComponent implements OnInit {
       this.title = 'Another day... Another chance to survive...';
     }
 
-    this.morningActions = [
-      new Action('Eat some food to recover health', 'food'),
-      new Action('Tend to the fire...', 'wood')
-    ];
+    // manage fire
+    if (this.gameState.resources.fire > 0) {
+      this.gameState.resources.fire--;
+      this.subtitle = this.gameState.resources.fire === 0 ?
+        'The fire went out... It\'s getting cold fast' :
+        '';
+    } else {
+      this.gameState.resources.health--;
+      this.subtitle = 'You feel cold... You won\'t be able to hold on much longer...';
+    }
 
-    this.afternoonActions = [
-      new Action('Rest a little bit...', 'rest'),
-      new Action('Try to hunt for some food', 'hunt'),
-      new Action('Go to the woods to find some firewood', 'scavenge'),
-    ];
+    // get morning actions
+    this.morningActions.push(new Action('Eat some food to recover health', 'food'));
+    this.morningActions.push(new Action('Tend to the fire...', 'wood'));
+
+    // get afternoon actions
+    this.afternoonActions.push(new Action('Rest a little bit...', 'rest'));
+    if (this.gameState.resources.health > 1) { this.afternoonActions.push(new Action('Try to hunt for some food', 'hunt')); }
+    if (this.gameState.resources.health > 1) { this.afternoonActions.push(new Action('Scavenge the woods', 'scavenge')); }
 
     this.gameStateService.updateGameState(this.gameState);
   }
@@ -66,8 +76,8 @@ export class SurvivalGameHubComponent implements OnInit {
       this.messageText = 'You don\'t have any food left... Hope you survive the night...';
     } else {
       this.messageText = 'You ate some food... I hope you left enough..';
-      this.gameState.resources.food--; // todo balance
-      this.gameState.resources.health++; // todo balance
+      this.gameState.resources.food--;
+      this.gameState.resources.health++;
       this.gameStateService.updateGameState(this.gameState);
     }
   }
@@ -76,9 +86,15 @@ export class SurvivalGameHubComponent implements OnInit {
     if (this.gameState.resources.wood <= 0) {
       this.messageText = 'You don\'t have any wood left... How are you gonna stay warm...';
     } else {
-      this.messageText = 'The fire is burning nicely... That didn\'t cost to much, did it...?';
-      this.gameState.resources.wood--; // todo balance
-      this.gameState.resources.fire++; // todo balance
+      if (this.gameState.resources.fire === 0) {
+        this.messageText = 'You use some twigs to light the fire...';
+      } else {
+        this.messageText = 'You put some wood on the already burning fire...';
+      }
+      this.gameState.resources.wood--;
+      if (this.gameState.resources.fire < 4) {
+        this.gameState.resources.fire++;
+      }
       this.gameStateService.updateGameState(this.gameState);
     }
 

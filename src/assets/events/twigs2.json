@@ -1,0 +1,16 @@
+[
+  {
+    "title": "You find some twigs on the ground....",
+    "actions": [
+      {
+        "description": "Continue searching...",
+        "action": "twigs3"
+      },
+      {
+        "description": "Head back home...",
+        "action": "return3"
+      }
+    ],
+    "chance": 1
+  }
+]

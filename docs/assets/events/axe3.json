@@ -1,0 +1,13 @@
+[
+  {
+    "title": "You hit the tree with your axe and it falls. What a great yield!",
+    "actions": [
+      {
+        "description": "Glad I didn't took the other road",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 3,
+    "chance": 1
+  }
+]

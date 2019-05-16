@@ -1,0 +1,16 @@
+[
+  {
+    "title": "You find a great big tree from which you can get some nice logs!",
+    "actions": [
+      {
+        "description": "Hit it with your axe!",
+        "action": "axe3"
+      },
+      {
+        "description": "This is way too big... find something smaller...",
+        "action": "logs3"
+      }
+    ],
+    "chance": 1
+  }
+]

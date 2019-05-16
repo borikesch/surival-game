@@ -8,5 +8,4 @@ import { Resources } from '../../models/resources.model';
 })
 export class SurvivalGameResourcesComponent {
   @Input() resources: Resources;
-
 }

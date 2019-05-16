@@ -1,8 +1,15 @@
-<h2> These are your resources, use them wisely</h2>
-
+<h2> The resources you still have...</h2>
 <div class="row">
-  <div class="col-md-3">You got {{ resources.food }} food.</div>
-  <div class="col-md-3">You got {{ resources.wood }} wood.</div>
-  <div class="col-md-3">You got {{ resources.health }} health.</div>
-  <div class="col-md-3">You got {{ resources.fire }} fire.</div>
+  <div class="col-md-12">You got {{ resources.food }} food.</div>
+  <div class="col-md-12">You got {{ resources.wood }} wood.</div>
+  <div class="col-md-12">
+    <!-- TODO Change style depending on resources.health -->
+    {{ resources.health <= 2 ? 'You are dying...' :
+      (resources.health <= 5 ? 'You\'re feeling pretty good' : 'You\'re feeling great! Nothing can beat you...')}}
+  </div>
+  <div class="fire col-md-12">
+    <!-- TODO Change style depending on resources.fire -->
+    {{ resources.fire === 0 ? 'The fire is gone...' :
+     (resources.fire <= 2 ? 'It is warm at the fire...' : 'The fire is burning high, you might get burned...')}}
+  </div>
 </div>

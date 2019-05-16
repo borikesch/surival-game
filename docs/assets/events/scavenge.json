@@ -1,10 +1,14 @@
 [
   {
-    "title": "You find yourself in the woods, what kind of game do you want to hunt",
+    "title": "Armed with good will you travel to the woods..",
     "actions": [
       {
-        "description": "I want to hunt bunnies",
-        "action": "bunny"
+        "description": "Find some twigs",
+        "action": "twigs2"
+      },
+      {
+        "description": "Go for the big logs",
+        "action": "logs2"
       }
     ],
     "chance": 1

@@ -1,0 +1,13 @@
+[
+  {
+    "title": "You didn't find another suitable tree, but you found some twigs...",
+    "actions": [
+      {
+        "description": "Better than nothing... I guess...",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 1,
+    "chance": 1
+  }
+]
