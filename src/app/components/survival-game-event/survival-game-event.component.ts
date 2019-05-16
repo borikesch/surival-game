@@ -74,6 +74,7 @@ export class SurvivalGameEventComponent implements OnInit {
   }
 
   onClickThirdEvent() {
+    // todo check validity
     this.gameState.resources.wood += this.gameState.eventState.thirdEvent.woodIncrease !== undefined ?
       this.gameState.eventState.thirdEvent.woodIncrease : 0;
     this.gameState.resources.fire += this.gameState.eventState.thirdEvent.fireIncrease !== undefined ?

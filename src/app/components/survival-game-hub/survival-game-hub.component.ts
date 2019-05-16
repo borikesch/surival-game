@@ -62,19 +62,26 @@ export class SurvivalGameHubComponent implements OnInit {
   }
 
   onActionEatFood() {
-    // Todo check validity
-    this.messageText = 'You ate some food... I hope you left enough...';
-    this.gameState.resources.food--; // todo balance
-    this.gameState.resources.health++; // todo balance
-    this.gameStateService.updateGameState(this.gameState);
+    if (this.gameState.resources.food <= 0) {
+      this.messageText = 'You don\'t have any food left... Hope you survive the night...';
+    } else {
+      this.messageText = 'You ate some food... I hope you left enough...';
+      this.gameState.resources.food--; // todo balance
+      this.gameState.resources.health++; // todo balance
+      this.gameStateService.updateGameState(this.gameState);
+    }
   }
 
   onActionSpendWood() {
-    // Todo check validity
-    this.messageText = 'The fire is burning nicely... That didn\'t cost to much, did it...?';
-    this.gameState.resources.wood--; // todo balance
-    this.gameState.resources.fire++; // todo balance
-    this.gameStateService.updateGameState(this.gameState);
+    if (this.gameState.resources.wood <= 0) {
+      this.messageText = 'You don\'t have any wood left... How are you gonna stay warm...';
+    } else {
+      this.messageText = 'The fire is burning nicely... That didn\'t cost to much, did it...?';
+      this.gameState.resources.wood--; // todo balance
+      this.gameState.resources.fire++; // todo balance
+      this.gameStateService.updateGameState(this.gameState);
+    }
+
   }
 
   onActionHunt() {
