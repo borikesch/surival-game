@@ -40,9 +40,7 @@ export class SurvivalGameHubComponent implements OnInit {
       this.title = 'Another day... Another chance to survive...';
     }
 
-    if (this.gameState.resources.health <= 0) {
-      this.router.navigateByUrl('/game-over');
-    }
+    this.checkHealth();
 
     // manage fire
     if (this.gameState.resources.fire > 0) {
@@ -92,8 +90,12 @@ export class SurvivalGameHubComponent implements OnInit {
     } else {
       if (this.gameState.resources.fire === 0) {
         this.messageText = 'You use some twigs to light the fire...';
-      } else {
+      } else if (this.gameState.resources.fire < 4) {
         this.messageText = 'You put some wood on the already burning fire...';
+      } else {
+        this.messageText = 'The fire burned too high and you got hurt...';
+        this.gameState.resources.health--;
+        this.checkHealth();
       }
       this.gameState.resources.wood--;
       if (this.gameState.resources.fire < 4) {
@@ -122,5 +124,11 @@ export class SurvivalGameHubComponent implements OnInit {
   proceedToNight() {
     this.gameState.eventState.isFromDayToNight = true;
     this.gameStateService.updateGameState(this.gameState);
+  }
+
+  checkHealth() {
+    if (this.gameState.resources.health <= 0) {
+      this.router.navigateByUrl('/game-over');
+    }
   }
 }
