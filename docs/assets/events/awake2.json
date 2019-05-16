@@ -1,0 +1,16 @@
+[
+  {
+    "title": "... Still nothing...",
+    "actions": [
+      {
+        "description": "Stay awake",
+        "action": "awake3"
+      },
+      {
+        "description": "Go to sleep at the last minute",
+        "action": "barelySleep3"
+      }
+    ],
+    "chance": 1
+  }
+]

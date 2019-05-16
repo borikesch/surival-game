@@ -1,0 +1,13 @@
+[
+  {
+    "title": "You didn't sleep all night... You are tired and nothing happened at all...",
+    "actions": [
+      {
+        "description": "Today will be a hard day...",
+        "action": ""
+      }
+    ],
+    "healthIncrease": -1,
+    "chance": 1
+  }
+]
