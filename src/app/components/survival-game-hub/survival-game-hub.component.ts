@@ -40,6 +40,10 @@ export class SurvivalGameHubComponent implements OnInit {
       this.title = 'Another day... Another chance to survive...';
     }
 
+    if (this.gameState.resources.health <= 0) {
+      this.router.navigateByUrl('/game-over');
+    }
+
     // manage fire
     if (this.gameState.resources.fire > 0) {
       this.gameState.resources.fire--;
@@ -57,8 +61,8 @@ export class SurvivalGameHubComponent implements OnInit {
 
     // get afternoon actions
     this.afternoonActions.push(new Action('Rest a little bit...', 'rest'));
-    if (this.gameState.resources.health > 1) { this.afternoonActions.push(new Action('Try to hunt for some food', 'hunt')); }
-    if (this.gameState.resources.health > 1) { this.afternoonActions.push(new Action('Scavenge the woods', 'scavenge')); }
+    this.afternoonActions.push(new Action('Try to hunt for some food', 'hunt'));
+    this.afternoonActions.push(new Action('Scavenge the woods', 'scavenge'));
 
     this.gameStateService.updateGameState(this.gameState);
   }

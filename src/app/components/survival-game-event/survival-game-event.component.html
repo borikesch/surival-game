@@ -1,5 +1,5 @@
 <div *ngIf="gameState">
-  <h2>Dit is de eventpage {{eventType}}</h2>
+  <!-- TODO title depending on action... -->
 
   <app-survival-game-actions *ngIf="gameState.eventState.firstEvent"
                              [title]="gameState.eventState.firstEvent.title"

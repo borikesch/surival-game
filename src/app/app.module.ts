@@ -9,6 +9,7 @@ import { ActionComponent } from './shared/components/action/action.component';
 import { SurvivalGameActionsComponent } from './shared/components/survival-game-actions/survival-game-actions.component';
 import { SurvivalGameResourcesComponent } from './shared/components/survival-game-resources/survival-game-resources.component';
 import { SurvivalGameHubNightComponent } from './components/survival-game-hub-night/survival-game-hub-night.component';
+import { SurvivalGameGameOverComponent } from './components/survival-game-game-over/survival-game-game-over.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SurvivalGameHubNightComponent } from './components/survival-game-hub-ni
     SurvivalGameActionsComponent,
     ActionComponent,
     SurvivalGameEventComponent,
-    SurvivalGameHubNightComponent
+    SurvivalGameHubNightComponent,
+    SurvivalGameGameOverComponent
   ],
   imports: [
     BrowserModule,
