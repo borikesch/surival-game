@@ -65,7 +65,7 @@ export class SurvivalGameHubComponent implements OnInit {
     if (this.gameState.resources.food <= 0) {
       this.messageText = 'You don\'t have any food left... Hope you survive the night...';
     } else {
-      this.messageText = 'You ate some food... I hope you left enough...';
+      this.messageText = 'You ate some food... I hope you left enough..';
       this.gameState.resources.food--; // todo balance
       this.gameState.resources.health++; // todo balance
       this.gameStateService.updateGameState(this.gameState);
