@@ -1,0 +1,13 @@
+[
+  {
+    "title": "What a great night sleep!",
+    "actions": [
+      {
+        "description": "Ready for the day",
+        "action": ""
+      }
+    ],
+    "healthIncrease": 1,
+    "chance": 1
+  }
+]

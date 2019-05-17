@@ -1,0 +1,16 @@
+[
+  {
+    "title": "You feel full and content",
+    "actions": [
+      {
+        "description": "Eat some more",
+        "action": "eat"
+      },
+      {
+        "description": "Relax and do nothing",
+        "action": "relax"
+      }
+    ],
+    "chance": 1
+  }
+]

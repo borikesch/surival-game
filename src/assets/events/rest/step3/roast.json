@@ -1,0 +1,16 @@
+[
+  {
+    "title": "The roasted food tastes quite nice!",
+    "actions": [
+      {
+        "description": "I'm ready for the night now",
+        "action": ""
+      }
+    ],
+    "woodIncrease": -1,
+    "foodIncrease": -1,
+    "fireIncrease": 1,
+    "healthIncrease": 2,
+    "chance": 1
+  }
+]

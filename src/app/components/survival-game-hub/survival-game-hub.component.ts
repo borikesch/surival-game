@@ -40,8 +40,6 @@ export class SurvivalGameHubComponent implements OnInit {
       this.title = 'Another day... Another chance to survive...';
     }
 
-    this.checkHealth();
-
     // manage fire
     if (this.gameState.resources.fire > 0) {
       this.gameState.resources.fire--;
@@ -52,6 +50,8 @@ export class SurvivalGameHubComponent implements OnInit {
       this.gameState.resources.health--;
       this.subtitle = 'You feel cold... You won\'t be able to hold on much longer...';
     }
+
+    this.checkHealth();
 
     // get morning actions
     this.morningActions.push(new Action('Eat some food to recover health', 'food'));

@@ -16,6 +16,7 @@ export class SurvivalGameHubNightComponent implements OnInit {
 
   messageText: string;
   title: string;
+  subtitle: string;
 
   constructor(
     private router: Router,
@@ -35,6 +36,19 @@ export class SurvivalGameHubNightComponent implements OnInit {
       this.gameState.eventState = new EventState();
       this.title = 'The night sets in quickly... Luckily you\'re safe at your base';
     }
+
+    this.checkHealth();
+
+    // manage food
+    if (this.gameState.resources.food > 0) {
+      this.subtitle = 'You eat some food as dinner... That feels good!';
+      this.gameState.resources.food--;
+    } else {
+      this.subtitle = 'You ran out of food... Better find some tomorrow...';
+      this.gameState.resources.health--;
+    }
+
+    this.checkHealth();
 
     this.actions = [
       new Action('Go to sleep', 'sleep'),
@@ -64,4 +78,9 @@ export class SurvivalGameHubNightComponent implements OnInit {
     this.gameStateService.updateGameState(this.gameState);
   }
 
+  checkHealth() {
+    if (this.gameState.resources.health <= 0) {
+      this.router.navigateByUrl('/game-over');
+    }
+  }
 }

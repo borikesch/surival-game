@@ -1,0 +1,14 @@
+[
+  {
+    "title": "You stare the afternoon away on a full tummy",
+    "actions": [
+      {
+        "description": "So relaxing....",
+        "action": ""
+      }
+    ],
+    "foodIncrease": -1,
+    "healthIncrease": 2,
+    "chance": 1
+  }
+]

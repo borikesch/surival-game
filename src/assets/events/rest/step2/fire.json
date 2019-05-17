@@ -1,0 +1,16 @@
+[
+  {
+    "title": "The fire is burning quite nicely... You feel good",
+    "actions": [
+      {
+        "description": "Roast some food above the fire",
+        "action": "roast"
+      },
+      {
+        "description": "Watch the fire burn...",
+        "action": "fire"
+      }
+    ],
+    "chance": 1
+  }
+]

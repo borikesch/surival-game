@@ -1,0 +1,15 @@
+[
+  {
+    "title": "The fire dances before your eyes",
+    "actions": [
+      {
+        "description": "So relaxing....",
+        "action": ""
+      }
+    ],
+    "woodIncrease": -1,
+    "fireIncrease": 1,
+    "healthIncrease": 1,
+    "chance": 1
+  }
+]

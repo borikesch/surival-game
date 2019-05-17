@@ -1,0 +1,20 @@
+[
+  {
+    "title": "You try to rest a little bit..",
+    "actions": [
+      {
+        "description": "Let's but some wood on the fire for a nice comfy feeling",
+        "action": "fire"
+      },
+      {
+        "description": "Eat something to make yourself feel good",
+        "action": "food"
+      },
+      {
+        "description": "Watch the wind blowing through the trees and relax",
+        "action": "trees"
+      }
+    ],
+    "chance": 1
+  }
+]

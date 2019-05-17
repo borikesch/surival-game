@@ -1,0 +1,14 @@
+[
+  {
+    "title": "You ate some more food. You haven't felt this good in ages...",
+    "actions": [
+      {
+        "description": "Nomnomnom",
+        "action": ""
+      }
+    ],
+    "foodIncrease": -2,
+    "healthIncrease": 3,
+    "chance": 1
+  }
+]

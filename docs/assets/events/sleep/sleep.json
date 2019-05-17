@@ -1,0 +1,12 @@
+[
+  {
+    "title": "You go to sleep",
+    "actions": [
+      {
+        "description": "zzzz",
+        "action": "sleep"
+      }
+    ],
+    "chance": 1
+  }
+]

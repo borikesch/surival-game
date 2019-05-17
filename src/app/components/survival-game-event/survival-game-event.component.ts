@@ -39,17 +39,17 @@ export class SurvivalGameEventComponent implements OnInit {
     this.gameState = this.gameStateService.getGameState();
     this.gameState.eventState.eventStarted = true;
     if (this.gameState.eventState.firstEvent === undefined) {
-      this.eventService.getNextEvent(this.eventType).subscribe(event => {
+      this.eventService.getNextEvent(this.eventType + '/' + this.eventType).subscribe(event => {
         this.gameState.eventState.firstEvent = event;
         this.gameStateService.updateGameState(this.gameState);
       });
     } else if (this.gameState.eventState.secondEvent === undefined && this.gameState.eventState.firstEventType !== '') {
-      this.eventService.getNextEvent(this.gameState.eventState.firstEventType).subscribe(event => {
+      this.eventService.getNextEvent(this.eventType + '/step2/' + this.gameState.eventState.firstEventType).subscribe(event => {
         this.gameState.eventState.secondEvent = event;
         this.gameStateService.updateGameState(this.gameState);
       });
     } else if (this.gameState.eventState.thirdEvent === undefined && this.gameState.eventState.secondEventType !== '') {
-      this.eventService.getNextEvent(this.gameState.eventState.secondEventType).subscribe(event => {
+      this.eventService.getNextEvent(this.eventType + '/step3/' + this.gameState.eventState.secondEventType).subscribe(event => {
         this.gameState.eventState.thirdEvent = event;
         this.gameStateService.updateGameState(this.gameState);
       });
@@ -59,7 +59,7 @@ export class SurvivalGameEventComponent implements OnInit {
 
   onClickFirstEvent(action: Action) {
     this.gameState.eventState.firstEventType = action.action;
-    this.eventService.getNextEvent(this.gameState.eventState.firstEventType).subscribe(event => {
+    this.eventService.getNextEvent(this.eventType + '/step2/' + this.gameState.eventState.firstEventType).subscribe(event => {
       this.gameState.eventState.secondEvent = event;
       this.gameStateService.updateGameState(this.gameState);
     });
@@ -67,7 +67,7 @@ export class SurvivalGameEventComponent implements OnInit {
 
   onClickSecondEvent(action: Action) {
     this.gameState.eventState.secondEventType = action.action;
-    this.eventService.getNextEvent(this.gameState.eventState.secondEventType).subscribe(event => {
+    this.eventService.getNextEvent(this.eventType + '/step3/' + this.gameState.eventState.secondEventType).subscribe(event => {
       this.gameState.eventState.thirdEvent = event;
       this.gameStateService.updateGameState(this.gameState);
     });
