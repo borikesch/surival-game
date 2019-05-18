@@ -4,11 +4,11 @@
     "actions": [
       {
         "description": "Continue searching...",
-        "action": "twigs3"
+        "action": "scavenge11"
       },
       {
         "description": "Head back home...",
-        "action": "return3"
+        "action": "scavenge12"
       }
     ],
     "chance": 1

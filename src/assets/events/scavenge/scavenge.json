@@ -4,11 +4,11 @@
     "actions": [
       {
         "description": "Find some twigs",
-        "action": "twigs2"
+        "action": "scavenge1"
       },
       {
         "description": "Go for the big logs",
-        "action": "logs2"
+        "action": "scavenge2"
       }
     ],
     "chance": 1

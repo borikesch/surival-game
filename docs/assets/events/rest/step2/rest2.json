@@ -4,11 +4,11 @@
     "actions": [
       {
         "description": "Eat some more",
-        "action": "eat"
+        "action": "rest21"
       },
       {
         "description": "Relax and do nothing",
-        "action": "relax"
+        "action": "rest22"
       }
     ],
     "chance": 1

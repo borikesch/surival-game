@@ -4,11 +4,11 @@
     "actions": [
       {
         "description": "Hit it with your axe!",
-        "action": "axe3"
+        "action": "scavenge21"
       },
       {
         "description": "This is way too big... find something smaller...",
-        "action": "logs3"
+        "action": "scavenge22"
       }
     ],
     "chance": 1

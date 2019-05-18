@@ -4,7 +4,7 @@
     "actions": [
       {
         "description": "zzzz",
-        "action": "sleep"
+        "action": "sleep11"
       }
     ],
     "chance": 1

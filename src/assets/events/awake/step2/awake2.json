@@ -1,14 +1,10 @@
 [
   {
-    "title": "... Still nothing...",
+    "title": "You're sleeping soundly...",
     "actions": [
       {
-        "description": "Stay awake",
-        "action": "awake3"
-      },
-      {
-        "description": "Go to sleep at the last minute",
-        "action": "barelySleep3"
+        "description": "zzzzz......",
+        "action": "awake21"
       }
     ],
     "chance": 1

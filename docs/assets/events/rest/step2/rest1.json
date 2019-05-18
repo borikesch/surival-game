@@ -4,11 +4,11 @@
     "actions": [
       {
         "description": "Roast some food above the fire",
-        "action": "roast"
+        "action": "rest11"
       },
       {
         "description": "Watch the fire burn...",
-        "action": "fire"
+        "action": "rest12"
       }
     ],
     "chance": 1

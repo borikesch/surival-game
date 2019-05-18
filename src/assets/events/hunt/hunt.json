@@ -4,7 +4,7 @@
     "actions": [
       {
         "description": "I want to hunt bunnies",
-        "action": "bunny"
+        "action": "hunt1"
       }
     ],
     "chance": 1

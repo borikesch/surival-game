@@ -4,11 +4,11 @@
     "actions": [
       {
         "description": "Stay awake",
-        "action": "awake2"
+        "action": "awake1"
       },
       {
         "description": "Go to sleep anyway",
-        "action": "sleep2"
+        "action": "awake2"
       }
     ],
     "chance": 1

@@ -4,7 +4,7 @@
     "actions": [
       {
         "description": "Run at it with your weapon",
-        "action": "run"
+        "action": "hunt11"
       }
     ],
     "chance": 1

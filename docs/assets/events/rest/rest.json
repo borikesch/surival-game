@@ -4,15 +4,15 @@
     "actions": [
       {
         "description": "Let's but some wood on the fire for a nice comfy feeling",
-        "action": "fire"
+        "action": "rest1"
       },
       {
         "description": "Eat something to make yourself feel good",
-        "action": "food"
+        "action": "rest2"
       },
       {
         "description": "Watch the wind blowing through the trees and relax",
-        "action": "trees"
+        "action": "rest3"
       }
     ],
     "chance": 1
