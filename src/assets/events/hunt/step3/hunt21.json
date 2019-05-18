@@ -1,0 +1,13 @@
+[
+  {
+    "title": "You manage to kill one of the deers... ",
+    "actions": [
+      {
+        "description": "That is a lot of food...",
+        "action": ""
+      }
+    ],
+    "foodIncrease": 2,
+    "chance": 1
+  }
+]

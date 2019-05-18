@@ -5,6 +5,10 @@
       {
         "description": "I want to hunt bunnies",
         "action": "hunt1"
+      },
+      {
+        "description": "I want to hunt deer",
+        "action": "hunt2"
       }
     ],
     "chance": 1

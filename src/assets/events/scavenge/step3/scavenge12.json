@@ -9,5 +9,26 @@
     ],
     "woodIncrease": 1,
     "chance": 1
+  },
+  {
+    "title": "On your way back you find some other twigs that would be usefull as firewood!",
+    "actions": [
+      {
+        "description": "Great, what a lucky day",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 2,
+    "chance": 1
+  },
+  {
+    "title": "On your way back you get chased by some animals... You drop your loot...",
+    "actions": [
+      {
+        "description": "Tough luck...",
+        "action": ""
+      }
+    ],
+    "chance": 1
   }
 ]
