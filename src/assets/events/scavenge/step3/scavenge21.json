@@ -9,5 +9,27 @@
     ],
     "woodIncrease": 3,
     "chance": 1
+  },
+  {
+    "title": "The tree is way to big... You hurt yourself while trying to bring it down...",
+    "actions": [
+      {
+        "description": "OUCH!",
+        "action": ""
+      }
+    ],
+    "healthIncrease": -1,
+    "chance": 1
+  },
+  {
+    "title": "You manage to chop off some wood from the tree... You couldn't bring it down though",
+    "actions": [
+      {
+        "description": "Better than nothing...",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 1,
+    "chance": 1
   }
 ]

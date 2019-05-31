@@ -7,7 +7,25 @@
         "action": ""
       }
     ],
-    "woodIncrease": 1,
-    "chance": 1
+    "woodIncrease": 1
+  },
+  {
+    "title": "You didn't find anything suitable... You leave home empty-handed",
+    "actions": [
+      {
+        "description": "Tough luck...",
+        "action": ""
+      }
+    ]
+  },
+  {
+    "title": "You find another, way smaller, tree.. You manage to bring it down before the sun sets...",
+    "actions": [
+      {
+        "description": "Good day...",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 2
   }
 ]
