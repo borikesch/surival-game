@@ -1,0 +1,22 @@
+[
+  {
+    "title": "You discovered that the sound was some small animal... It ran away when it saw you coming and left some berries!",
+    "actions": [
+      {
+        "description": "Ready for the day",
+        "action": ""
+      }
+    ],
+    "foodIncrease": 1
+  },
+  {
+    "title": "You didn't find the source of the sound... You slept a few more hours safe and sound",
+    "actions": [
+      {
+        "description": "Glad I'm at least awake",
+        "action": ""
+      }
+    ],
+    "healthIncrease": 1
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "title": "Nothing happened all night, you wake up feeling refreshed",
+    "title": "A lot happened since then... You wake up...",
     "actions": [
       {
         "description": "Ready for another day",
@@ -11,7 +11,7 @@
     "chance": 1
   },
   {
-    "title": "That was a great night, you never felt this awake before",
+    "title": "You dream of all the happy memories... You wake up feeling good",
     "actions": [
       {
         "description": "Ready for another day",
@@ -22,7 +22,7 @@
     "chance": 1
   },
   {
-    "title": "The last few hours of the night were rough... Nightmares haunted you... Better luck next night.",
+    "title": "The bad dreams haunt you all night... You wake up feeling tired",
     "actions": [
       {
         "description": "Ready for another day",

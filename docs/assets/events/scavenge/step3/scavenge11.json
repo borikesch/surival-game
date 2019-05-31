@@ -9,5 +9,39 @@
     ],
     "woodIncrease": 2,
     "chance": 1
+  },
+  {
+    "title": "You didn't find anything usefull anymore... At least you already found something",
+    "actions": [
+      {
+        "description": "Pretty good",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 1,
+    "chance": 1
+  },
+  {
+    "title": "During your continued search you encounter some wild animals... They chase you, but you manage too escape...",
+    "actions": [
+      {
+        "description": "That was close...",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 1,
+    "chance": 1
+  },
+  {
+    "title": "some wild animals ambush you... You barely manage to escape with your already found loot...",
+    "actions": [
+      {
+        "description": "I feel hurt...",
+        "action": ""
+      }
+    ],
+    "woodIncrease": 1,
+    "healthIncrease": -1,
+    "chance": 1
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "title": "You find a group of deers...",
+    "actions": [
+      {
+        "description": "Run at it with your weapon",
+        "action": "hunt21"
+      }
+    ],
+    "chance": 1
+  }
+]

@@ -8,5 +8,19 @@
       }
     ],
     "chance": 1
+  },
+  {
+    "title": "You wake up from a distant sound...",
+    "actions": [
+      {
+        "description": "Go back to sleep",
+        "action": "sleep12"
+      },
+      {
+        "description": "Check out the sound",
+        "action": "sleep13"
+      }
+    ],
+    "chance": 1
   }
 ]

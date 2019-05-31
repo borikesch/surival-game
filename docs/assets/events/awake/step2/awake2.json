@@ -8,5 +8,15 @@
       }
     ],
     "chance": 1
+  },
+  {
+    "title": "You're dreaming about the time before...",
+    "actions": [
+      {
+        "description": "....",
+        "action": "awake22"
+      }
+    ],
+    "chance": 1
   }
 ]
