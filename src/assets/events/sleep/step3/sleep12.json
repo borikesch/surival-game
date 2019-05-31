@@ -1,6 +1,6 @@
 [
   {
-    "title": "What a great night sleep!",
+    "title": "The sound didn't bother you anymore and you slept pretty good those last few hours!",
     "actions": [
       {
         "description": "Ready for the day",
@@ -11,7 +11,7 @@
     "chance": 1
   },
   {
-    "title": "The last few hours were rough... You were dreaming about scary creatures... You wake up with sweat all over your body...",
+    "title": "The sound didn't stop... It kept at a distant though and you managed to get some sleep..",
     "actions": [
       {
         "description": "Glad I'm at least awake",
@@ -21,7 +21,7 @@
     "chance": 1
   },
   {
-    "title": "You slept pretty good... But the cold ground makes pretty good not that good at all...",
+    "title": "The sound came closer during the night and you were too afraid to sleep...",
     "actions": [
       {
         "description": "I slept a bit at least...",
