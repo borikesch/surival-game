@@ -9,7 +9,7 @@ export class GameStateService {
     if (localStorage.getItem('gameState') === null) {
       localStorage.setItem('gameState', JSON.stringify(new GameState()));
     }
-    return JSON.parse(localStorage.getItem('gameState'));
+    return JSON.parse(localStorage.getItem('gameState')) as GameState;
   }
 
   public updateGameState(gameState: GameState): void {
