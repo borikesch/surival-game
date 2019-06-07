@@ -12,7 +12,7 @@ export class SurvivalGameActionsComponent {
   @Input() disabled: boolean;
   @Output() actionClick: EventEmitter<any> = new EventEmitter();
 
-  onActionClick(event) {
+  public onActionClick(event): void {
     this.actionClick.emit(event);
   }
 

@@ -65,7 +65,7 @@ export class SurvivalGameHubComponent implements OnInit {
     this.gameStateService.updateGameState(this.gameState);
   }
 
-  onActionClick(action: Action) {
+  public onActionClick(action: Action): void {
     if (action.action === 'food') { this.onActionEatFood(); }
     if (action.action === 'wood') { this.onActionSpendWood(); }
     if (action.action === 'hunt') { this.onActionHunt(); }
@@ -73,7 +73,7 @@ export class SurvivalGameHubComponent implements OnInit {
     if (action.action === 'scavenge') { this.onActionScavenge(); }
   }
 
-  onActionEatFood() {
+  private onActionEatFood(): void {
     if (this.gameState.resources.food <= 0) {
       this.messageText = 'You don\'t have any food left... Hope you survive the night...';
     } else {
@@ -84,7 +84,7 @@ export class SurvivalGameHubComponent implements OnInit {
     }
   }
 
-  onActionSpendWood() {
+  private onActionSpendWood(): void {
     if (this.gameState.resources.wood <= 0) {
       this.messageText = 'You don\'t have any wood left... How are you gonna stay warm...';
     } else {
@@ -106,27 +106,27 @@ export class SurvivalGameHubComponent implements OnInit {
 
   }
 
-  onActionHunt() {
+  private onActionHunt(): void {
     this.proceedToNight();
     this.router.navigate(['/event', 'hunt']);
   }
 
-  onActionRest() {
+  private onActionRest(): void {
     this.proceedToNight();
     this.router.navigate(['/event', 'rest']);
   }
 
-  onActionScavenge() {
+  private onActionScavenge(): void {
     this.proceedToNight();
     this.router.navigate(['/event', 'scavenge']);
   }
 
-  proceedToNight() {
+  private proceedToNight(): void {
     this.gameState.eventState.isFromDayToNight = true;
     this.gameStateService.updateGameState(this.gameState);
   }
 
-  checkHealth() {
+  private checkHealth(): void {
     if (this.gameState.resources.health <= 0) {
       this.router.navigateByUrl('/game-over');
     }

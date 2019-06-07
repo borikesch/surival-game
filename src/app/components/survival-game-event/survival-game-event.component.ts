@@ -57,7 +57,7 @@ export class SurvivalGameEventComponent implements OnInit {
     this.gameStateService.updateGameState(this.gameState);
   }
 
-  onClickFirstEvent(action: Action) {
+  public onClickFirstEvent(action: Action): void {
     this.gameState.eventState.firstEventType = action.action;
     this.eventService.getNextEvent(this.eventType + '/step2/' + this.gameState.eventState.firstEventType).subscribe(event => {
       this.gameState.eventState.secondEvent = event;
@@ -65,7 +65,7 @@ export class SurvivalGameEventComponent implements OnInit {
     });
   }
 
-  onClickSecondEvent(action: Action) {
+  public onClickSecondEvent(action: Action): void {
     this.gameState.eventState.secondEventType = action.action;
     this.eventService.getNextEvent(this.eventType + '/step3/' + this.gameState.eventState.secondEventType).subscribe(event => {
       this.gameState.eventState.thirdEvent = event;
@@ -73,7 +73,7 @@ export class SurvivalGameEventComponent implements OnInit {
     });
   }
 
-  onClickThirdEvent() {
+  public onClickThirdEvent(): void {
     // todo check validity
     this.gameState.resources.wood += this.gameState.eventState.thirdEvent.woodIncrease !== undefined ?
       this.gameState.eventState.thirdEvent.woodIncrease : 0;

@@ -10,5 +10,5 @@ export class ActionComponent {
   @Input() action: Action;
   @Input() disabled: boolean;
   @Output() actionClick: EventEmitter<any> = new EventEmitter();
-  onActionClick = () => this.actionClick.emit(this.action);
+  public onActionClick = () => this.actionClick.emit(this.action);
 }

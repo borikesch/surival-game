@@ -14,7 +14,7 @@ export class EventService {
     private http: HttpClient
   ) { }
 
-  getNextEvent(action: string): Observable<Event> {
+  public getNextEvent(action: string): Observable<Event> {
     return this.http.get<Event[]>(`${this.url}/${action}.json`).pipe(
       map(data => {
         return data[Math.floor(Math.random() * data.length)];

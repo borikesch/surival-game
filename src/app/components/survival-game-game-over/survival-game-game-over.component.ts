@@ -18,12 +18,13 @@ export class SurvivalGameGameOverComponent implements OnInit {
 
   ngOnInit() {
     this.gameStateService.resetGameState();
+    // TODO extract content to service to simplify component
     this.actions = [
       new Action('Yes, I want to try again', '')
     ];
   }
 
-  onActionClick(event) {
+  public onActionClick(): void {
     this.router.navigateByUrl('/main/day');
   }
 
