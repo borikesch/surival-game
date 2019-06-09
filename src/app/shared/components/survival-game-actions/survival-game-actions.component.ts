@@ -3,8 +3,7 @@ import { Action } from '../../models/action.model';
 
 @Component({
   selector: 'app-survival-game-actions',
-  templateUrl: './survival-game-actions.component.html',
-  styleUrls: ['./survival-game-actions.component.css']
+  templateUrl: './survival-game-actions.component.html'
 })
 export class SurvivalGameActionsComponent {
   @Input() actions: Action[];

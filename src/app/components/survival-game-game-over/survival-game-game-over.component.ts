@@ -5,8 +5,7 @@ import { GameStateService } from 'src/app/shared/services/game-state.service';
 
 @Component({
   selector: 'app-survival-game-game-over',
-  templateUrl: './survival-game-game-over.component.html',
-  styleUrls: ['./survival-game-game-over.component.css']
+  templateUrl: './survival-game-game-over.component.html'
 })
 export class SurvivalGameGameOverComponent implements OnInit {
   title = 'Too bad... You didn\'t make it anymore...';

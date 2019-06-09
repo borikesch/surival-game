@@ -7,8 +7,7 @@ import { GameStateService } from 'src/app/shared/services/game-state.service';
 
 @Component({
   selector: 'app-survival-game-hub',
-  templateUrl: './survival-game-hub.component.html',
-  styleUrls: ['./survival-game-hub.component.css']
+  templateUrl: './survival-game-hub.component.html'
 })
 export class SurvivalGameHubComponent implements OnInit {
   morningActions: Action[] = [];

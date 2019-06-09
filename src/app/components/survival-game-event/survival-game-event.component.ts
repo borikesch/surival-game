@@ -9,8 +9,7 @@ import { GameStateService } from 'src/app/shared/services/game-state.service';
 
 @Component({
   selector: 'app-survival-game-event',
-  templateUrl: './survival-game-event.component.html',
-  styleUrls: ['./survival-game-event.component.css']
+  templateUrl: './survival-game-event.component.html'
 })
 export class SurvivalGameEventComponent implements OnInit {
   firstEvent: Event;

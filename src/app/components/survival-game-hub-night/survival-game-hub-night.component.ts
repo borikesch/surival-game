@@ -7,8 +7,7 @@ import { GameStateService } from 'src/app/shared/services/game-state.service';
 
 @Component({
   selector: 'app-survival-game-hub-night',
-  templateUrl: './survival-game-hub-night.component.html',
-  styleUrls: ['./survival-game-hub-night.component.css']
+  templateUrl: './survival-game-hub-night.component.html'
 })
 export class SurvivalGameHubNightComponent implements OnInit {
   actions: Action[];
