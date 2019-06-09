@@ -5,8 +5,7 @@ import { GameStateService } from 'src/app/shared/services/game-state.service';
 
 @Component({
   selector: 'app-survival-game-game-over',
-  templateUrl: './survival-game-game-over.component.html',
-  styleUrls: ['./survival-game-game-over.component.css']
+  templateUrl: './survival-game-game-over.component.html'
 })
 export class SurvivalGameGameOverComponent implements OnInit {
   title = 'Too bad... You didn\'t make it anymore...';
@@ -18,12 +17,13 @@ export class SurvivalGameGameOverComponent implements OnInit {
 
   ngOnInit() {
     this.gameStateService.resetGameState();
+    // TODO extract content to service to simplify component
     this.actions = [
       new Action('Yes, I want to try again', '')
     ];
   }
 
-  onActionClick(event) {
+  public onActionClick(): void {
     this.router.navigateByUrl('/main/day');
   }
 

@@ -3,8 +3,7 @@ import { Action } from '../../models/action.model';
 
 @Component({
   selector: 'app-survival-game-actions',
-  templateUrl: './survival-game-actions.component.html',
-  styleUrls: ['./survival-game-actions.component.css']
+  templateUrl: './survival-game-actions.component.html'
 })
 export class SurvivalGameActionsComponent {
   @Input() actions: Action[];
@@ -12,7 +11,7 @@ export class SurvivalGameActionsComponent {
   @Input() disabled: boolean;
   @Output() actionClick: EventEmitter<any> = new EventEmitter();
 
-  onActionClick(event) {
+  public onActionClick(event): void {
     this.actionClick.emit(event);
   }
 

@@ -7,8 +7,7 @@ import { GameStateService } from 'src/app/shared/services/game-state.service';
 
 @Component({
   selector: 'app-survival-game-hub-night',
-  templateUrl: './survival-game-hub-night.component.html',
-  styleUrls: ['./survival-game-hub-night.component.css']
+  templateUrl: './survival-game-hub-night.component.html'
 })
 export class SurvivalGameHubNightComponent implements OnInit {
   actions: Action[];
@@ -58,27 +57,27 @@ export class SurvivalGameHubNightComponent implements OnInit {
     this.gameStateService.updateGameState(this.gameState);
   }
 
-  onActionClick(action: Action) {
+  public onActionClick(action: Action): void {
     if (action.action === 'sleep') { this.onActionSleep(); }
     if (action.action === 'awake') { this.onActionAwake(); }
   }
 
-  onActionSleep() {
+  public onActionSleep(): void {
     this.proceedToDay();
     this.router.navigate(['/event', 'sleep']);
   }
 
-  onActionAwake() {
+  private onActionAwake(): void {
     this.proceedToDay();
     this.router.navigate(['/event', 'awake']);
   }
 
-  proceedToDay() {
+  private proceedToDay(): void {
     this.gameState.eventState.isFromNightToDay = true;
     this.gameStateService.updateGameState(this.gameState);
   }
 
-  checkHealth() {
+  private checkHealth(): void {
     if (this.gameState.resources.health <= 0) {
       this.router.navigateByUrl('/game-over');
     }
